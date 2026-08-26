@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Estudiantil</title>
+    <style>
+        :root {
+            --primary: #0f4c81;
+            --secondary: #1e88e5;
+            --accent: #f4b400;
+            --bg: #f5f7fb;
+            --text: #1f2937;
+            --card: #ffffff;
+            --border: #dbe4f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        header {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 20px 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-logo {
+            width: 140px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .brand p {
+            margin: 4px 0 0;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            padding: 48px 0 24px;
+        }
+
+        .hero-box {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.08);
+        }
+
+        .hero h2 {
+            margin-top: 0;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .hero p {
+            margin-bottom: 24px;
+            max-width: 700px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid transparent;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0b3b63;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: #eef5ff;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            padding: 24px 0 48px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--secondary);
+        }
+
+        .card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #0b2740;
+            color: #d8e3f0;
+            text-align: center;
+            padding: 18px 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container topbar">
+            <div class="brand">
+                <img
+                    class="brand-logo"
+                    src="https://www.aiepvirtual.cl/branding/_1_1/CustomNavigationLogo.png?m=lt8t67y8"
+                    alt="Logo AIEP"
+                />
+                <h1>Portal Estudiantil</h1>
+                <p>Acceso rápido a información académica</p>
+            </div>
+
+            <nav aria-label="Navegación principal">
+                <a href="asignaturas.html">Asignaturas</a>
+                <a href="calendario.html">Calendario</a>
+                <a href="matricula.html">Matrícula</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-box">
+                <h2>Bienvenido al portal</h2>
+                <p>
+                    Este sitio reúne enlaces básicos para revisar asignaturas, calendario académico y proceso de matrícula.
+                </p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="asignaturas.html">Ver asignaturas</a>
+                    <a class="btn btn-secondary" href="calendario.html">Ver calendario</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cards">
+            <article class="card">
+                <h3>Asignaturas</h3>
+                <p>Revisa tus ramos y el contenido general del semestre.</p>
+                <a href="asignaturas.html">Ir a asignaturas</a>
+            </article>
+
+            <article class="card">
+                <h3>Calendario</h3>
+                <p>Consulta fechas importantes, evaluaciones y actividades.</p>
+                <a href="calendario.html">Ir al calendario</a>
+            </article>
+
+            <article class="card">
+                <h3>Matrícula</h3>
+                <p>Accede a la información básica del proceso de matrícula.</p>
+                <a href="matricula.html">Ir a matrícula</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portal Estudiantil</p>
+    </footer>
+</body>
+</html>
