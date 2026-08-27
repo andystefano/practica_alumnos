@@ -1,0 +1,172 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo general del body */
+body {
+  background-color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra superior roja */
+.topbar {
+  background-color: #c00; /* rojo intenso */
+  color: white;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.topbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.brand .logo-box {
+  font-weight: bold;
+  font-size: 1.5rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Navegación */
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+  outline: none;
+}
+
+.barra-superior {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 7%;
+  background: #c62828;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  background: white;
+  border-radius: 4px;
+}
+
+.pestanas {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+  align-items: flex-end;
+}
+
+.pestanas a {
+  padding: 14px 22px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px 6px 0 0;
+}
+
+.pestanas a:hover,
+.pestanas a:first-child {
+  background: white;
+  color: #c62828;
+}
+
+.contenido {
+  width: min(92%, 950px);
+  margin: 42px auto;
+}
+
+h1 {
+  margin-bottom: 28px;
+  color: #333333;
+  text-align: center;
+}
+
+.calendario {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.calendario caption {
+  padding: 18px;
+  background: #333333;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.calendario th {
+  padding: 14px 8px;
+  background: #e53935;
+  color: white;
+}
+
+.calendario td {
+  height: 92px;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.calendario td:hover {
+  background: #fff0f0;
+}
+
+@media (max-width: 650px) {
+  .barra-superior {
+    padding: 10px 4%;
+  }
+
+  .pestanas a {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+
+  .calendario th {
+    padding: 10px 2px;
+    font-size: 0.7rem;
+  }
+
+  .calendario td {
+    height: 64px;
+    padding: 8px;
+  }
+}
